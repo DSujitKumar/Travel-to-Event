@@ -1,7 +1,8 @@
 body{
   margin: 0;
     width: 100%;
-    font-size: 1rem;
+    font-size: 2vmax;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
 }
 #dvPanel{
   margin-top: 0%;
@@ -10,7 +11,54 @@ body{
 #dvMap{
     width: 100%;
     height: 500px;
+    margin: 0;
 }
 #mapTb{
     width: 100%;
+
+}
+article{
+    float: right;
+    width: 70%;
+    z-index: 1;
+}
+aside{
+    width: 28.8%;
+    float: left;
+    background-color: rgb(110,55,252);
+    box-shadow:1px 0px lightslategray, 4px 0px 50px grey ;
+    color: white;
+    height: 120%;
+    z-index: 2;
+}
+label{
+    color: whitesmoke;
+}
+input{
+    width: 100%;
+    height: 5%;
+    padding: 5px;
+    font-size: 1.5vmax;
+}
+button{
+    padding: 10px;
+    border: 2px solid whitesmoke;
+    margin: 10px;
+    width: 15vmax;
+    float: right;
+    background-color: rgb(110,55,252);
+    color: ghostwhite;
+    cursor: pointer;
+    box-shadow: 0px 0px white;
+    font-weight: bold;
+    font-size: 1.5vmax;
+}
+button:hover{
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 4px ghostwhite;
+    background-color: ghostwhite;
+    color: rgb(110,55,252);
+}
+button:active{
+    box-shadow: 0px 0px 4px yellow;
 }

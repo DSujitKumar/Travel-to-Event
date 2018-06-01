@@ -4,31 +4,44 @@
     <script type="text/javascript" src="place_auto_and_direction.js"></script>
 <link rel="stylesheet" href="directionStyle.css">
   </head>
-  <body onload=" getLocation();">
 
-        Source:
-        <input type="text" id="txtSource" style="width: 200px" />
-        &nbsp; Destination:
-        <input type="text" id="txtDestination"  style="width: 200px" />
-        <br>
-        <input type="button" value="Get Route" onclick="GetRoute()" />
+  <body onload="getLocation();">
 
-        <div id="dvDistance">
-        </div>
-<table id="mapTb">
-  <tr>
-    <td>
-        <div id="dvMap"></div>
-        </td>
-  </tr>
-    <tr>
-          <br>
-          <td>
-        <div id="dvPanel" style="">
-        </div>
-      </td>
-    </tr>
-</table>
+    <section>
+
+
+        <aside>
+            <label for="txtSource"> Pickup from:</label><br>
+                <input type="text" id="txtSource" placeholder="Enter start point" autofocus><br>
+            <br>
+            <label for="txtDestination"> Destination: </label><br>
+                <input type="text" id="txtDestination"placeholder="Enter end point"  />
+                <br>
+            <button  id="getDirection" >Proceed</button>
+
+                <div id="dvDistance">
+                </div>
+        </aside>
+
+
+        <article>
+                <table id="mapTb">
+                  <tr>
+                    <td>
+                        <div id="dvMap"></div>
+                        </td>
+                  </tr>
+                    <tr>
+                          <td>
+                        <div id="dvPanel" style="">
+                        </div>
+                      </td>
+                    </tr>
+                </table>
+        </article>
+
+
+        </section>
 
   </body>
 </html>
