@@ -4,12 +4,12 @@
     <script type="text/javascript" src="place_auto_and_direction.js"></script>
 <link rel="stylesheet" href="directionStyle.css">
   </head>
-  <body onload="GetRoute()">
+  <body onload=" getLocation();">
 
         Source:
-        <input type="text" id="txtSource" value="KIIT Square, Nandankanan Road, Patia, Bhubaneswar, Odisha, India" style="width: 200px" />
+        <input type="text" id="txtSource" style="width: 200px" />
         &nbsp; Destination:
-        <input type="text" id="txtDestination" value="Nandankanan Zoological Park, Barang, Odisha, India" style="width: 200px" />
+        <input type="text" id="txtDestination"  style="width: 200px" />
         <br>
         <input type="button" value="Get Route" onclick="GetRoute()" />
 
@@ -18,13 +18,13 @@
 <table id="mapTb">
   <tr>
     <td>
-        <div id="dvMap" style="width: 100%; height: 500px"></div>
+        <div id="dvMap"></div>
         </td>
   </tr>
     <tr>
           <br>
           <td>
-        <div id="dvPanel" style="width: 100%; height: 500px">
+        <div id="dvPanel" style="">
         </div>
       </td>
     </tr>

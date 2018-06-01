@@ -7,15 +7,26 @@ google.maps.event.addDomListener(window, 'load', function () {
     directionsDisplay = new google.maps.DirectionsRenderer({ 'draggable': true });
 });
 
-function GetRoute() {
-    var mumbai = new google.maps.LatLng(18.9750, 72.8258);
-    var mapOptions = {
-        zoom: 7,
-        center: mumbai
-    };
-    map = new google.maps.Map(document.getElementById('dvMap'), mapOptions);
-    directionsDisplay.setMap(map);
-    directionsDisplay.setPanel(document.getElementById('dvPanel'));
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        document.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+function showPosition(position) {
+    GetRoute();
+    function GetRoute() {
+        var uluru = {lat: position.coords.latitude, lng: position.coords.longitude};
+        var mapOptions = {
+            zoom: 14,
+            center: uluru
+        };
+        map = new google.maps.Map(document.getElementById('dvMap'), mapOptions);
+        directionsDisplay.setMap(map);
+        directionsDisplay.setPanel(document.getElementById('dvPanel'));
+}
+
 
     /*********DIRECTIONS AND ROUTE**********************/
     source = document.getElementById("txtSource").value;
