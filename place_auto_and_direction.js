@@ -6,7 +6,7 @@ google.maps.event.addDomListener(window, 'load', function () {
     new google.maps.places.SearchBox(document.getElementById('txtDestination'));
     directionsDisplay = new google.maps.DirectionsRenderer({ 'draggable': true });
 });
- 
+
 function GetRoute() {
     var mumbai = new google.maps.LatLng(18.9750, 72.8258);
     var mapOptions = {
@@ -16,11 +16,11 @@ function GetRoute() {
     map = new google.maps.Map(document.getElementById('dvMap'), mapOptions);
     directionsDisplay.setMap(map);
     directionsDisplay.setPanel(document.getElementById('dvPanel'));
- 
-    //*********DIRECTIONS AND ROUTE**********************//
+
+    /*********DIRECTIONS AND ROUTE**********************/
     source = document.getElementById("txtSource").value;
     destination = document.getElementById("txtDestination").value;
- 
+
     var request = {
         origin: source,
         destination: destination,
@@ -31,8 +31,8 @@ function GetRoute() {
             directionsDisplay.setDirections(response);
         }
     });
- 
-    //*********DISTANCE AND DURATION**********************//
+
+    /*********DISTANCE AND DURATION**********************/
     var service = new google.maps.DistanceMatrixService();
     service.getDistanceMatrix({
         origins: [source],
@@ -49,7 +49,7 @@ function GetRoute() {
            dvDistance.innerHTML = "";
             dvDistance.innerHTML += "Distance: " + distance + "<br />";
             dvDistance.innerHTML += "Duration:" + duration;
- 
+
         } else {
             alert("Unable to find the distance via road.");
         }

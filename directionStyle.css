@@ -1,0 +1,10 @@
+body{
+  margin: 0px;
+}
+#dvmap{
+  float: left;
+}
+#dvPanel{
+  float: right;
+  height: 100%;
+}
