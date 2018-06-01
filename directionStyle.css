@@ -1,10 +1,12 @@
 body{
-  margin: 0px;
-}
-#dvmap{
-  float: left;
+  margin: 0;
+    width: 100%;
+    font-size: 1rem;
 }
 #dvPanel{
-  float: right;
+  margin-top: 0%;
   height: 100%;
+}
+#mapTb{
+    width: 100%;
 }
