@@ -17,7 +17,7 @@ function GetRoute() {
     directionsDisplay.setMap(map);
     directionsDisplay.setPanel(document.getElementById('dvPanel'));
 
-    //*********DIRECTIONS AND ROUTE**********************//
+    /*********DIRECTIONS AND ROUTE**********************/
     source = document.getElementById("txtSource").value;
     destination = document.getElementById("txtDestination").value;
 
@@ -32,7 +32,7 @@ function GetRoute() {
         }
     });
 
-    //*********DISTANCE AND DURATION**********************//
+    /*********DISTANCE AND DURATION**********************/
     var service = new google.maps.DistanceMatrixService();
     service.getDistanceMatrix({
         origins: [source],
